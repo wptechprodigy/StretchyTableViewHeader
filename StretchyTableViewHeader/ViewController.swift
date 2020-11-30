@@ -76,3 +76,13 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let header = tableView.tableHeaderView as? StretcyTableHeaderView else {
+            return
+        }
+        
+        header.scrollViewDidScroll(scrollView: tableView)
+    }
+}
