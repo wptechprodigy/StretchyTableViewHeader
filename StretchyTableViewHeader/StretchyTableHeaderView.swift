@@ -23,8 +23,8 @@ final class StretcyTableHeaderView: UIView {
     private var containerViewHeight = NSLayoutConstraint()
     
     // MARK: - Init
-    override convenience init(frame: CGRect) {
-        self.init(frame: frame)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         createViews()
         setViewConstraints()
     }
